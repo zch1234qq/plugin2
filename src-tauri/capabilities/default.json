@@ -1,0 +1,15 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Default capability for main window with least privilege baseline",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "dialog:allow-open",
+    "core:path:default",
+    "store:default",
+    "os:default",
+    "clipboard-manager:default",
+    "shell:allow-open"
+  ]
+}
