@@ -1,0 +1,91 @@
+/* ComCard组件样式 */
+.com-card {
+  aspect-ratio: 16/9;
+  position: relative;
+  padding: 6px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 9px;
+  user-select: none;
+  background-color: var(--com-card-bg, var(--component-background, #ffffff));
+  border: 1px solid var(--com-card-border, transparent);
+  /* 添加触摸反馈 */
+  -webkit-tap-highlight-color: transparent;  /* 禁用默认触摸高亮 */
+  touch-action: manipulation;             /* 优化触摸操作 */
+  /* 添加阴影和过渡效果 */
+  box-shadow: var(--com-card-shadow, 0 2px 8px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease;
+}
+
+.com-card.com-create-card {
+  border-style: dashed;
+  border-width: 2px;
+}
+
+/* hover效果 */
+.com-card:hover {
+  box-shadow: var(--com-card-shadow-hover, 0 8px 25px rgba(0, 0, 0, 0.15));
+  transform: translateY(-2px);
+}
+
+/* 卡片内容容器 */
+.com-card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 删除按钮容器 */
+.com-card-delete-container {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 6px;
+  margin-top: 6px;
+}
+
+/* 操作按钮容器 */
+.com-card-actions {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 8px;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+/* 分享按钮样式 */
+.com-card-share-btn, .com-card-delete-btn, .com-card-more-btn {
+  border-radius: 50%;
+}
+
+/* 删除/更多按钮样式 */
+.com-card-delete-btn, .com-card-more-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.com-card-delete-btn:hover {
+  background-color: var(--com-card-delete-hover, rgba(255, 77, 79, 0.1));
+}
+
+.com-card-more-btn:hover {
+  background-color: var(--com-card-btn-hover, rgba(0, 0, 0, 0.06));
+}
+
+/* 应用名称样式 */
+.com-card-name {
+  color: var(--com-card-text, var(--text-color, #000));
+  font-size: 1rem;
+}
+
+/* 应用ID样式 */
+.com-card-id {
+  color: var(--com-card-text-secondary, rgba(0, 0, 0, 0.55));
+}

@@ -1,0 +1,38 @@
+.reset-password-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.reset-form-container {
+  max-width: 31.25em;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.reset-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .reset-form-container {
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .reset-form-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+} 

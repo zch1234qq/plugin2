@@ -1,0 +1,49 @@
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* 字体定义 */
+@font-face {
+  font-family: 'DingTalk';
+  src: url('./assets/DingTalkJinBuTi-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #333;
+}
+
+.loading-spinner::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 在您的全局CSS文件中 */
+.react-flow__node {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  /* 其他需要覆盖的样式 */
+  transform: "translateY(-50%) translateX(-50%)";
+}

@@ -1,0 +1,292 @@
+/* 图片预览样式 */
+.image-preview-root .ant-image-preview-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.preview-mask {
+  background-color: rgba(0, 0, 0, 0.85);
+  cursor: pointer; /* 添加指针样式 */
+}
+
+/* 增强点击区域样式 */
+.ant-image-preview-wrap {
+  cursor: pointer;
+}
+
+.ant-image-preview-mask {
+  cursor: pointer;
+}
+
+/* 图片区域保持默认指针 */
+.ant-image-preview-img-wrapper {
+  cursor: default;
+}
+
+/* 预览图片指针样式 */
+.ant-image-preview-img {
+  cursor: grab;
+}
+
+.ant-image-preview-img:active {
+  cursor: grabbing;
+}
+
+/* 图片悬停遮罩 */
+.image-hover-mask:hover {
+  opacity: 1 !important;
+}
+
+/* 自定义图片预览模态框 */
+.custom-image-preview .ant-modal-content {
+  background: transparent;
+  box-shadow: none;
+}
+
+.custom-image-preview .ant-modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 调试/记忆窗口共用样式 */
+.com-drawer-static-window {
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: var(--secondary-color, #f0f0f0);
+  border: 1px solid var(--border-color, #e8e8e8);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.com-drawer-static-debug-window {
+  display: flex;
+}
+
+.com-drawer-static-memory-window {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.com-drawer-static-panel {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* 头部样式 */
+.com-drawer-static-header {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 42px;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border-color, #e8e8e8);
+  background-color: var(--component-background, #fff);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+  row-gap: 6px;
+  column-gap: 10px;
+}
+
+.com-drawer-static-header-title {
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.com-drawer-static-header-meta {
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 22px;
+}
+
+.com-drawer-static-header-actions {
+  margin-left: auto;
+}
+
+.com-drawer-static-icon-button {
+  flex: 0 0 auto;
+}
+
+/* 内容区域样式 */
+.com-drawer-static-content {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 12px;
+  background-color: var(--fill-quaternary, #eceff4);
+  background-image: linear-gradient(to bottom, rgba(236, 239, 244, 0.96), rgba(236, 239, 244, 1));
+}
+
+/* 文本内容样式 */
+.com-drawer-static-text {
+  width: 100%;
+  padding: 0 0 12px;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  word-break: break-word;
+  flex: 1 1 auto;
+  min-height: 0;
+  /* 确保滚动条可见 */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.35) var(--secondary-color, #f0f0f0);
+  overflow-y: auto;
+}
+
+/* WebKit浏览器滚动条样式 */
+.com-drawer-static-text::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.com-drawer-static-text::-webkit-scrollbar-track {
+  background: var(--secondary-color, #f0f0f0);
+}
+
+.com-drawer-static-text::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+}
+
+.com-drawer-static-text::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* 错误文本样式 */
+.com-drawer-static-error-text {
+  color: var(--error-color, #ff4d4f);
+  overflow-y: auto;
+}
+
+/* 图片内容居中样式 */
+.com-drawer-static-img-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* 文本内容居左样式 */
+.com-drawer-static-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  /* height: 100%; */
+}
+
+/* 上半部分高度控制 */
+.com-drawer-static-top-half {
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* 下半部分高度控制 */
+.com-drawer-static-bottom-half {
+  /* height: 50%;
+  width: 100%; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* 记忆组件样式 */
+.com-memory-show {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* 记忆组件头部样式 */
+.com-memory-header {
+  user-select: none;
+}
+
+/* 记忆组件内容样式 */
+.com-memory-content {
+  height: auto;
+  width: auto;
+  overflow-x: auto;
+}
+
+.com-memory-content pre {
+  margin: 0;
+}
+
+/* 确保表格单元格内容完整显示 */
+.com-memory-content .ant-table-tbody > tr > td {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+/* 卡片样式 */
+.com-qr-card {
+  border-radius: 9px;
+  width: 100%;
+  margin: 20px;
+}
+
+/* 购买提示文本样式 */
+.com-p {
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] .com-drawer-static-text {
+  scrollbar-color: rgba(255, 255, 255, 0.25) var(--secondary-color, #141414);
+}
+
+[data-theme="dark"] .com-drawer-static-text::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+[data-theme="dark"] .com-drawer-static-text::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+[data-theme="dark"] .com-p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+[data-theme="dark"] .com-drawer-static-header-meta {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+[data-theme="dark"] .com-drawer-static-header {
+  background-color: #141414;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .com-drawer-static-content {
+  background-color: #1f1f1f;
+  background-image: linear-gradient(to bottom, rgba(31, 31, 31, 0.96), rgba(31, 31, 31, 1));
+}
+
+/* QR错误组件样式 */
+.com-qr-error {
+  width: 100%;
+}
+
+/* 自定义 Divider 样式 - 降低高度 */
+.custom-divider {
+  margin: 8px 0;
+  height: 1px;
+}

@@ -1,0 +1,175 @@
+/* 说明框样式 */
+.plan-description {
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+  padding: 12px 16px;
+  background-color: var(--panel-background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* 移动端说明框优化 */
+@media (max-width: 768px) {
+  .plan-description {
+    margin-bottom: 20px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-description {
+    margin-bottom: 16px;
+    padding: 8px 10px;
+  }
+}
+
+/* 资源包页面样式 - 条形布局 */
+.plan-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 100px; /* 为底部固定按钮留出空间 */
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto; /* 允许垂直滚动 */
+  -webkit-overflow-scrolling: touch; /* iOS 平滑滚动 */
+  touch-action: pan-y; /* 允许垂直触摸滚动 */
+  -ms-touch-action: pan-y; /* IE/Edge 支持 */
+}
+
+/* 确保页面可以正常滚动 */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+  overscroll-behavior-y: contain; /* 防止滚动链 */
+}
+
+.plan-strip-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  width: 100%;
+  touch-action: pan-y; /* 允许垂直触摸滚动 */
+  -ms-touch-action: pan-y; /* IE/Edge 支持 */
+}
+
+/* 条形卡片选中状态 */
+.ant-card.selected {
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+  background: rgba(24, 144, 255, 0.04);
+  background: color-mix(in srgb, var(--primary-color) 4%, transparent);
+}
+
+/* 条形卡片悬停效果 */
+.ant-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow-color) !important;
+}
+
+/* 资源包卡片样式优化 */
+.plan-card {
+  height: 80px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+  color: inherit;
+}
+
+/* 卡片内容区域允许垂直滚动 */
+.plan-card .ant-card-body {
+  overflow-y: auto;
+  max-height: calc(100% - 24px); /* 减去卡片内边距 */
+  padding: 12px !important;
+  touch-action: pan-y; /* 允许垂直触摸滚动 */
+  -ms-touch-action: pan-y; /* IE/Edge 支持 */
+}
+
+/* 选中/未选中样式由组件内 token 控制，避免主题冲突 */
+
+/* 底部固定按钮 */
+.fixed-button-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--component-background);
+  border-top: 1px solid var(--border-color);
+  padding: 16px 20px;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px var(--shadow-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .plan-container {
+    padding: 16px;
+    padding-bottom: 100px;
+  }
+  
+  .plan-strip-container {
+    gap: 6px;
+    padding-bottom: 100px;
+    padding: 0 16px;
+  }
+  
+  .fixed-button-container {
+    padding: 12px 16px;
+  }
+  
+  .plan-card {
+    height: 70px;
+  }
+  
+  /* 移动端字体和间距调整 */
+  .plan-card .ant-card-body {
+    padding: 12px !important;
+    max-height: calc(100% - 24px); /* 减去卡片内边距 */
+  }
+  
+  /* 移动端按钮优化 */
+  .fixed-button-container button {
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-container {
+    padding: 12px;
+    padding-bottom: 100px;
+  }
+  
+  .plan-strip-container {
+    padding: 0 12px;
+    gap: 4px;
+  }
+  
+  .plan-card {
+    height: 65px;
+  }
+  
+  .plan-card .ant-card-body {
+    padding: 10px !important;
+    max-height: calc(100% - 20px); /* 减去卡片内边距 */
+  }
+  
+  .fixed-button-container {
+    padding: 10px 12px;
+  }
+  
+  /* 小屏幕优化 */
+  .fixed-button-container button {
+    height: 48px;
+  }
+}

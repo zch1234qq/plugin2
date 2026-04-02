@@ -1,0 +1,14 @@
+.image-crop-editor .ReactCrop__drag-handle {
+  display: none;
+}
+
+.image-crop-editor .ReactCrop__drag-handle.ord-nw,
+.image-crop-editor .ReactCrop__drag-handle.ord-se {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #9c27b0;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  opacity: 1;
+}

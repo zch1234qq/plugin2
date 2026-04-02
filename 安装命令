@@ -1,0 +1,2 @@
+npm install @tauri-apps/api
+yarn add @tauri-apps/api 
