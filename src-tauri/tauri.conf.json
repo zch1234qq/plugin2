@@ -27,7 +27,7 @@
     "targets": ["nsis"],
     "icon": [
       "icons/icon.ico",
-      "icons/icon.png"
+      "icons/icon.jpg"
     ]
   },
   "plugins": {
